@@ -7,28 +7,28 @@ const rename = require('gulp-rename');
 
 
 function css() {
-  return src('source/sass/*.scss')
-    .pipe(sass())
-    .pipe(autoprefixer({
-      cascade: false
-    }))
-    .pipe(dest('source/css/'))
-    .pipe(cssmin())
-    .pipe(rename('style.min.css'))
-    .pipe(dest('source/css/'))
-    .pipe(sync.stream());
+    return src('source/sass/*.scss', '!source/sass/_*.scss')
+        .pipe(sass())
+        .pipe(autoprefixer({
+            cascade: false
+        }))
+        .pipe(dest('source/css/'))
+        .pipe(cssmin())
+        .pipe(rename('style.min.css'))
+        .pipe(dest('source/css/'))
+        .pipe(sync.stream());
 }
 
 function browserSync() {
-  sync.init({
-    server: {
-      baseDir: "source/"
-    },
-    notify: false
-  });
+    sync.init({
+        server: {
+            baseDir: "source/"
+        },
+        notify: false
+    });
 
-  watch('source/sass/**/*.scss', css);
-  watch("source/*.html").on('change', sync.reload);
+    watch('source/sass/**/*.scss', css);
+    watch("source/*.html").on('change', sync.reload);
 }
 
 // exports.имя_команды(любое) = имя функции
