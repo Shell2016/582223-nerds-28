@@ -4,17 +4,18 @@ const sync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const cssmin = require('gulp-csso');
 const rename = require('gulp-rename');
+const sourcemaps = require('gulp-sourcemaps');
 
 
 function css() {
-    return src('source/sass/*.scss', '!source/sass/_*.scss')
+    return src('source/sass/style.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(autoprefixer({
-            cascade: false
-        }))
+        .pipe(autoprefixer())
         .pipe(dest('source/css/'))
         .pipe(cssmin())
         .pipe(rename('style.min.css'))
+        .pipe(sourcemaps.write())
         .pipe(dest('source/css/'))
         .pipe(sync.stream());
 }
