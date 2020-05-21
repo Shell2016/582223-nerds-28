@@ -1,0 +1,88 @@
+.main-slider {
+    background-color: $grey;
+    min-height: 430px;
+    position: relative;
+}
+
+.main-slider__item {
+    display: none;
+    min-height: 430px;
+    flex-direction: column;
+    align-items: flex-start;
+    &:nth-child(1) {
+        background: url("../img/nerds-index-slide1 1.png") no-repeat right top;
+    }
+    &:nth-child(2) {
+        background: url("../img/nerds-index-slide2 1.png") no-repeat right top;
+    }
+    &:nth-child(3) {
+        background: url("../img/nerds-index-slide3 1.png") no-repeat right top;
+    }
+}
+
+.main-slider__title {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    width: 540px;
+    margin-bottom: 25px;
+    margin-top: 78px;
+}
+
+.main-slider__text {
+    line-height: 24px;
+    width: 420px;
+}
+
+.main-slider__btn {
+    margin-top: auto;
+    margin-bottom: 80px;
+}
+
+.main-slider__controls {
+    position: absolute;
+    z-index: 100;
+    bottom: 96px;
+    left: 48%;
+    font-size: 0;
+}
+
+.main-slider__controls label {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+#slider1:checked ~ .container .main-slider__item:nth-child(1) {
+    display: flex;
+}
+
+#slider2:checked ~ .container .main-slider__item:nth-child(2) {
+    display: flex;
+}
+
+#slider3:checked ~ .container .main-slider__item:nth-child(3) {
+    display: flex;
+}
+
+#slider1:checked ~ .main-slider__controls .main-slider__toggle--1::before,
+#slider2:checked ~ .main-slider__controls .main-slider__toggle--2::before,
+#slider3:checked ~ .main-slider__controls .main-slider__toggle--3::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: inherit;
+    border-radius: 50%;
+    border: 2px solid #C1C1C1;
+    width: 8px;
+    height: 8px;
+    margin: -4px;
+    z-index: 2;
+}

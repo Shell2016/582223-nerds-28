@@ -2,6 +2,8 @@ $fontfamily: 'Roboto', sans-serif;
 $textcolor: #fff;
 $fontsize: 16px;
 
+$grey: #eee;
+
 *,
 *::before,
 *::after {
@@ -28,6 +30,7 @@ a {
 
 p {
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 .visually-hidden {
@@ -44,6 +47,7 @@ p {
 body {
     margin: 0;
     padding: 0;
+    // min-width: 320px;
     font-family: $fontfamily;
     font-size: $fontsize;
     font-weight: normal;
