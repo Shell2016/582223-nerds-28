@@ -16,6 +16,7 @@ html {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 ul {
@@ -29,8 +30,13 @@ a {
 }
 
 p {
-    margin-bottom: 0;
-    margin-top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
 }
 
 .visually-hidden {
@@ -51,6 +57,7 @@ body {
     font-family: $fontfamily;
     font-size: $fontsize;
     font-weight: normal;
+    line-height: 24px;
     background-color: $textcolor;
 }
 

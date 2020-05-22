@@ -1,0 +1,46 @@
+.promo__list {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 2px #eee solid;
+}
+
+.promo__item {
+    width: 300px;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &--1 .promo__picture {
+        background: #FB565A url("../img/promo1.jpg") no-repeat;
+    }
+    &--2 .promo__picture {
+        background: #00CA74 url("../img/promo2.jpg") no-repeat;
+    }
+    &--3 .promo__picture {
+        background: #EFC849 url("../img/promo3.jpg") no-repeat;
+    }
+}
+
+.promo__picture {
+    width: 300px;
+    height: 146px;
+    margin-bottom: 25px;
+}
+
+.promo__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.promo__text {
+    margin-bottom: 32px;
+}
+.promo_btn {
+    margin-top: auto;
+    margin-bottom: 80px;
+}
+

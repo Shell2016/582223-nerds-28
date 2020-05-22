@@ -19,6 +19,7 @@
 .main-nav__item.main-nav__basket {
     margin-right: 0;
     margin-left: auto;
+    background: $grey url("../img/cart-icon.svg") no-repeat left;
 }
 
 .main-nav__basket .main-nav__link {

@@ -43,7 +43,8 @@
     position: absolute;
     z-index: 100;
     bottom: 96px;
-    left: 48%;
+    left: 50%;
+    margin-left: -35px;
     font-size: 0;
 }
 
@@ -83,6 +84,7 @@
     border: 2px solid #C1C1C1;
     width: 8px;
     height: 8px;
-    margin: -4px;
+    margin-left: -4px;
+    margin-top: -4px;
     z-index: 2;
 }
