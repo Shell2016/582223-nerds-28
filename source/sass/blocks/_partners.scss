@@ -1,0 +1,27 @@
+.partners__list {    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 180px;
+    border-bottom: 2px #eee solid;    
+    margin-bottom: 80px;    
+}
+
+.partners__item {   
+    display: flex;   
+    opacity: 0.2;
+    position: relative;    
+    img {
+        margin: auto;        
+    }
+    &:hover {
+        opacity: 1;
+    }
+    &:active {
+        opacity: 0.2;
+    }       
+}
+
+// .main-footer__map {
+//     width: 1920px;
+//     height: 416px;
+// }

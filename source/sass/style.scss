@@ -1,6 +1,6 @@
 @import "fonts";
 @import "normalize";
-@import "global";
+@import "options";
 
 @import "blocks/container";
 @import "blocks/page-header";
@@ -8,10 +8,14 @@
 @import "blocks/main-slider";
 @import "blocks/link-btn";
 @import "blocks/promo";
-@import "blocks/info"
+@import "blocks/info";
+@import "blocks/partners";
 
 
 
+
+// В самом конце импорт медиа
+// @import "_media.scss";
 
 
 

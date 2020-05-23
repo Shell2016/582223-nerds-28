@@ -25,7 +25,9 @@ function browserSync() {
         server: {
             baseDir: "source/"
         },
-        notify: false
+        notify: false,
+        online: true,
+        // tunnel: true
     });
 
     watch('source/sass/**/*.scss', css);
